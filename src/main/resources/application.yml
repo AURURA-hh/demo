@@ -1,0 +1,24 @@
+# 服务器端口
+server:
+  port: 8080
+
+# Spring 配置
+spring:
+  application:
+    name: demo
+  # 数据库连接配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # !! 修改这里 !! 替换成你的数据库地址、库名、用户名和密码
+    url: jdbc:mysql://localhost:3306/center?serverTimezone=UTC
+    username: root
+    password: 753.951.852.
+
+# MyBatis-Plus 配置
+mybatis-plus:
+  # 配置
+  configuration:
+    # 开启驼峰命名自动映射，例如数据库的 a_column 会自动映射到实体类的 aColumn
+    map-underscore-to-camel-case: true
+    # 在控制台打印出执行的 SQL 语句，方便调试
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
