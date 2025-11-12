@@ -1,18 +1,18 @@
 # 服务器端口
 server:
-  port: 8080
+  port: 8080         # 这里是端口号，可以根据需要修改
 
 # Spring 配置
 spring:
   application:
-    name: demo
-  # 数据库连接配置
+    name: demo   # 应用名称   可以舍弃掉
+  # 数据库连接配置   这种东西不要记  因为实际上每次都是自动能够生成或者直接从其他原有代码复制过来就行
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver # 这里是使用Mysql的驱动
     # !! 修改这里 !! 替换成你的数据库地址、库名、用户名和密码
-    url: jdbc:mysql://localhost:3306/center?serverTimezone=UTC
-    username: root
-    password: 753.951.852.
+    url: jdbc:mysql://localhost:3306/center?serverTimezone=UTC #这里地址前面的是固定的，然后localhost改成要操作的数据库
+    username: root   # 账号名
+    password: 753.951.852. # 密码
 
 # MyBatis-Plus 配置
 mybatis-plus:

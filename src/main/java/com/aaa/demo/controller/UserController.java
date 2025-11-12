@@ -1,6 +1,7 @@
 package com.aaa.demo.controller;
 
-import com.aaa.demo.model.User;
+import com.aaa.demo.model.dto.UserLoginRequest;
+import com.aaa.demo.model.entity.User;
 import com.aaa.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,6 +9,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 @RestController // 这是一个特殊的 Controller，它的所有方法默认返回 JSON 数据。
@@ -40,7 +44,7 @@ public class UserController {
     }
 
     /**
-     * API 3: 创建新用户
+     * API 3: 创建新用户  首要目标
      * - HTTP 方法: POST
      * - URL: /api/users
      * @RequestBody 会将请求体中的 JSON 数据自动转换成 User 对象
@@ -49,6 +53,21 @@ public class UserController {
     public ResponseEntity<User> createUser(@RequestBody User user) {
         return null;
     }
+
+    /**
+     * 用户登录接口
+     * - HTTP 方法: POST
+     * - URL: /api/users/login
+     * @param userLoginRequest
+     * @return
+     */
+    @PostMapping("/login")
+    public long userLogin(@RequestBody UserLoginRequest userLoginRequest) {
+        //TODO: process POST request
+        
+        return 0L;
+    }
+    
 
     /**
      * API 4: 更新用户信息
